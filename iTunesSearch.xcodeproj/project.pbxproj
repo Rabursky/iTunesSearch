@@ -25,6 +25,9 @@
 		C9B0712F1BDA8CAA00A8DD1C /* PresentersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0712E1BDA8CAA00A8DD1C /* PresentersTests.m */; };
 		C9B071331BDA8CAA00A8DD1C /* Presenters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B0711E1BDA8CAA00A8DD1C /* Presenters.framework */; };
 		C9B071341BDA8CAA00A8DD1C /* Presenters.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9B0711E1BDA8CAA00A8DD1C /* Presenters.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9B0713F1BDA8FD400A8DD1C /* ITSSearchNetworkProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0713E1BDA8FD400A8DD1C /* ITSSearchNetworkProtocol.h */; };
+		C9B071421BDA903000A8DD1C /* ITSNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071401BDA903000A8DD1C /* ITSNetworkManager.h */; };
+		C9B071431BDA903000A8DD1C /* ITSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071411BDA903000A8DD1C /* ITSNetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,9 @@
 		C9B071271BDA8CAA00A8DD1C /* PresentersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B0712E1BDA8CAA00A8DD1C /* PresentersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentersTests.m; sourceTree = "<group>"; };
 		C9B071301BDA8CAA00A8DD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9B0713E1BDA8FD400A8DD1C /* ITSSearchNetworkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSSearchNetworkProtocol.h; sourceTree = "<group>"; };
+		C9B071401BDA903000A8DD1C /* ITSNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSNetworkManager.h; sourceTree = "<group>"; };
+		C9B071411BDA903000A8DD1C /* ITSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSNetworkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +283,9 @@
 		C9B0713B1BDA8F3B00A8DD1C /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				C9B0713E1BDA8FD400A8DD1C /* ITSSearchNetworkProtocol.h */,
+				C9B071401BDA903000A8DD1C /* ITSNetworkManager.h */,
+				C9B071411BDA903000A8DD1C /* ITSNetworkManager.m */,
 			);
 			name = Infrastructure;
 			sourceTree = "<group>";
@@ -304,6 +313,8 @@
 			files = (
 				C9B070FE1BDA8C8900A8DD1C /* Domain.h in Headers */,
 				C9B071211BDA8CAA00A8DD1C /* Presenters.h in Headers */,
+				C9B071421BDA903000A8DD1C /* ITSNetworkManager.h in Headers */,
+				C9B0713F1BDA8FD400A8DD1C /* ITSSearchNetworkProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B071431BDA903000A8DD1C /* ITSNetworkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
