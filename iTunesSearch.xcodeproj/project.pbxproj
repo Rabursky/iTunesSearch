@@ -48,6 +48,8 @@
 		C9B0716C1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0716A1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m */; };
 		C9B0716E1BDAACC200A8DD1C /* ITSTableViewListControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0716D1BDAACC200A8DD1C /* ITSTableViewListControllerProtocol.h */; };
 		C9B071701BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0716F1BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h */; };
+		C9B071731BDAB0BD00A8DD1C /* ITSInteractorsFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071711BDAB0BD00A8DD1C /* ITSInteractorsFactory.h */; };
+		C9B071741BDAB0BD00A8DD1C /* ITSInteractorsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071721BDAB0BD00A8DD1C /* ITSInteractorsFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +168,8 @@
 		C9B0716A1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSSearchResultsPresenter.m; sourceTree = "<group>"; };
 		C9B0716D1BDAACC200A8DD1C /* ITSTableViewListControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSTableViewListControllerProtocol.h; sourceTree = "<group>"; };
 		C9B0716F1BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSTableViewListControllerItemProtocol.h; sourceTree = "<group>"; };
+		C9B071711BDAB0BD00A8DD1C /* ITSInteractorsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSInteractorsFactory.h; sourceTree = "<group>"; };
+		C9B071721BDAB0BD00A8DD1C /* ITSInteractorsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSInteractorsFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +286,8 @@
 		C9B070FC1BDA8C8900A8DD1C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C9B071711BDAB0BD00A8DD1C /* ITSInteractorsFactory.h */,
+				C9B071721BDAB0BD00A8DD1C /* ITSInteractorsFactory.m */,
 				C9B0713D1BDA8F4700A8DD1C /* Interactors */,
 				C9B071441BDA969800A8DD1C /* Builders */,
 				C9B0713C1BDA8F4200A8DD1C /* Models */,
@@ -394,6 +400,7 @@
 				C9B071571BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.h in Headers */,
 				C9B071471BDA96D700A8DD1C /* ITSSearchResult.h in Headers */,
 				C9B0715A1BDAA1CC00A8DD1C /* ITSInteractorProtocol.h in Headers */,
+				C9B071731BDAB0BD00A8DD1C /* ITSInteractorsFactory.h in Headers */,
 				C9B070FE1BDA8C8900A8DD1C /* Domain.h in Headers */,
 				C9B0714B1BDA96E600A8DD1C /* ITSSearchResultBuilder.h in Headers */,
 				C9B071211BDA8CAA00A8DD1C /* Presenters.h in Headers */,
@@ -658,6 +665,7 @@
 				C9B0714C1BDA96E600A8DD1C /* ITSSearchResultBuilder.m in Sources */,
 				C9B071581BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.m in Sources */,
 				C9B071431BDA903000A8DD1C /* ITSNetworkManager.m in Sources */,
+				C9B071741BDAB0BD00A8DD1C /* ITSInteractorsFactory.m in Sources */,
 				C9B071481BDA96D700A8DD1C /* ITSSearchResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
