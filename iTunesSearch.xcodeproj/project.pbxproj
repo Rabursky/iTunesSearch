@@ -44,6 +44,10 @@
 		C9B071621BDAA4DB00A8DD1C /* ITSGetSearchResultsInteractorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071611BDAA4DB00A8DD1C /* ITSGetSearchResultsInteractorTestCase.m */; };
 		C9B071651BDAA62700A8DD1C /* SearchNetworkMock.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071641BDAA62700A8DD1C /* SearchNetworkMock.m */; };
 		C9B071681BDAA93700A8DD1C /* BuilderMock.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071671BDAA93700A8DD1C /* BuilderMock.m */; };
+		C9B0716B1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071691BDAAC4400A8DD1C /* ITSSearchResultsPresenter.h */; };
+		C9B0716C1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0716A1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m */; };
+		C9B0716E1BDAACC200A8DD1C /* ITSTableViewListControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0716D1BDAACC200A8DD1C /* ITSTableViewListControllerProtocol.h */; };
+		C9B071701BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0716F1BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +162,10 @@
 		C9B071641BDAA62700A8DD1C /* SearchNetworkMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchNetworkMock.m; sourceTree = "<group>"; };
 		C9B071661BDAA93700A8DD1C /* BuilderMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuilderMock.h; sourceTree = "<group>"; };
 		C9B071671BDAA93700A8DD1C /* BuilderMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuilderMock.m; sourceTree = "<group>"; };
+		C9B071691BDAAC4400A8DD1C /* ITSSearchResultsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSSearchResultsPresenter.h; sourceTree = "<group>"; };
+		C9B0716A1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSSearchResultsPresenter.m; sourceTree = "<group>"; };
+		C9B0716D1BDAACC200A8DD1C /* ITSTableViewListControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSTableViewListControllerProtocol.h; sourceTree = "<group>"; };
+		C9B0716F1BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSTableViewListControllerItemProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +308,10 @@
 			children = (
 				C9B071201BDA8CAA00A8DD1C /* Presenters.h */,
 				C9B071221BDA8CAA00A8DD1C /* Info.plist */,
+				C9B0716D1BDAACC200A8DD1C /* ITSTableViewListControllerProtocol.h */,
+				C9B0716F1BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h */,
+				C9B071691BDAAC4400A8DD1C /* ITSSearchResultsPresenter.h */,
+				C9B0716A1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -395,6 +407,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B071701BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h in Headers */,
+				C9B0716B1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.h in Headers */,
+				C9B0716E1BDAACC200A8DD1C /* ITSTableViewListControllerProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +682,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B0716C1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
