@@ -15,6 +15,16 @@
 		C9B070DE1BDA623600A8DD1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B070DD1BDA623600A8DD1C /* Assets.xcassets */; };
 		C9B070E11BDA623600A8DD1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B070DF1BDA623600A8DD1C /* LaunchScreen.storyboard */; };
 		C9B070EC1BDA623600A8DD1C /* iTunesSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B070EB1BDA623600A8DD1C /* iTunesSearchTests.m */; };
+		C9B070FE1BDA8C8900A8DD1C /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B070FD1BDA8C8900A8DD1C /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9B071051BDA8C8900A8DD1C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; };
+		C9B0710C1BDA8C8900A8DD1C /* DomainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0710B1BDA8C8900A8DD1C /* DomainTests.m */; };
+		C9B071101BDA8C8900A8DD1C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; };
+		C9B071111BDA8C8900A8DD1C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9B071211BDA8CAA00A8DD1C /* Presenters.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071201BDA8CAA00A8DD1C /* Presenters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9B071281BDA8CAA00A8DD1C /* Presenters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B0711E1BDA8CAA00A8DD1C /* Presenters.framework */; };
+		C9B0712F1BDA8CAA00A8DD1C /* PresentersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0712E1BDA8CAA00A8DD1C /* PresentersTests.m */; };
+		C9B071331BDA8CAA00A8DD1C /* Presenters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B0711E1BDA8CAA00A8DD1C /* Presenters.framework */; };
+		C9B071341BDA8CAA00A8DD1C /* Presenters.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9B0711E1BDA8CAA00A8DD1C /* Presenters.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +35,64 @@
 			remoteGlobalIDString = C9B070CA1BDA623600A8DD1C;
 			remoteInfo = iTunesSearch;
 		};
+		C9B071061BDA8C8900A8DD1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B070C31BDA623600A8DD1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B070FA1BDA8C8900A8DD1C;
+			remoteInfo = Domain;
+		};
+		C9B071081BDA8C8900A8DD1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B070C31BDA623600A8DD1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B070CA1BDA623600A8DD1C;
+			remoteInfo = iTunesSearch;
+		};
+		C9B0710E1BDA8C8900A8DD1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B070C31BDA623600A8DD1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B070FA1BDA8C8900A8DD1C;
+			remoteInfo = Domain;
+		};
+		C9B071291BDA8CAA00A8DD1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B070C31BDA623600A8DD1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B0711D1BDA8CAA00A8DD1C;
+			remoteInfo = Presenters;
+		};
+		C9B0712B1BDA8CAA00A8DD1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B070C31BDA623600A8DD1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B070CA1BDA623600A8DD1C;
+			remoteInfo = iTunesSearch;
+		};
+		C9B071311BDA8CAA00A8DD1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B070C31BDA623600A8DD1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B0711D1BDA8CAA00A8DD1C;
+			remoteInfo = Presenters;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C9B071171BDA8C8900A8DD1C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C9B071111BDA8C8900A8DD1C /* Domain.framework in Embed Frameworks */,
+				C9B071341BDA8CAA00A8DD1C /* Presenters.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C9B070CB1BDA623600A8DD1C /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +110,18 @@
 		C9B070E71BDA623600A8DD1C /* iTunesSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B070EB1BDA623600A8DD1C /* iTunesSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTunesSearchTests.m; sourceTree = "<group>"; };
 		C9B070ED1BDA623600A8DD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9B070FB1BDA8C8900A8DD1C /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9B070FD1BDA8C8900A8DD1C /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
+		C9B070FF1BDA8C8900A8DD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9B071041BDA8C8900A8DD1C /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9B0710B1BDA8C8900A8DD1C /* DomainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DomainTests.m; sourceTree = "<group>"; };
+		C9B0710D1BDA8C8900A8DD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9B0711E1BDA8CAA00A8DD1C /* Presenters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presenters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9B071201BDA8CAA00A8DD1C /* Presenters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presenters.h; sourceTree = "<group>"; };
+		C9B071221BDA8CAA00A8DD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9B071271BDA8CAA00A8DD1C /* PresentersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9B0712E1BDA8CAA00A8DD1C /* PresentersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentersTests.m; sourceTree = "<group>"; };
+		C9B071301BDA8CAA00A8DD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B071101BDA8C8900A8DD1C /* Domain.framework in Frameworks */,
+				C9B071331BDA8CAA00A8DD1C /* Presenters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +141,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C9B070F71BDA8C8900A8DD1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B071011BDA8C8900A8DD1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B071051BDA8C8900A8DD1C /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B0711A1BDA8CAA00A8DD1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B071241BDA8CAA00A8DD1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B071281BDA8CAA00A8DD1C /* Presenters.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,7 +178,11 @@
 			isa = PBXGroup;
 			children = (
 				C9B070CD1BDA623600A8DD1C /* iTunesSearch */,
+				C9B0711F1BDA8CAA00A8DD1C /* Presenters */,
+				C9B070FC1BDA8C8900A8DD1C /* Domain */,
 				C9B070EA1BDA623600A8DD1C /* iTunesSearchTests */,
+				C9B0712D1BDA8CAA00A8DD1C /* PresentersTests */,
+				C9B0710A1BDA8C8900A8DD1C /* DomainTests */,
 				C9B070CC1BDA623600A8DD1C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +192,10 @@
 			children = (
 				C9B070CB1BDA623600A8DD1C /* iTunesSearch.app */,
 				C9B070E71BDA623600A8DD1C /* iTunesSearchTests.xctest */,
+				C9B070FB1BDA8C8900A8DD1C /* Domain.framework */,
+				C9B071041BDA8C8900A8DD1C /* DomainTests.xctest */,
+				C9B0711E1BDA8CAA00A8DD1C /* Presenters.framework */,
+				C9B071271BDA8CAA00A8DD1C /* PresentersTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,7 +235,86 @@
 			path = iTunesSearchTests;
 			sourceTree = "<group>";
 		};
+		C9B070FC1BDA8C8900A8DD1C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C9B0713D1BDA8F4700A8DD1C /* Interactors */,
+				C9B0713C1BDA8F4200A8DD1C /* Models */,
+				C9B0713B1BDA8F3B00A8DD1C /* Infrastructure */,
+				C9B070FD1BDA8C8900A8DD1C /* Domain.h */,
+				C9B070FF1BDA8C8900A8DD1C /* Info.plist */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C9B0710A1BDA8C8900A8DD1C /* DomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9B0710B1BDA8C8900A8DD1C /* DomainTests.m */,
+				C9B0710D1BDA8C8900A8DD1C /* Info.plist */,
+			);
+			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		C9B0711F1BDA8CAA00A8DD1C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				C9B071201BDA8CAA00A8DD1C /* Presenters.h */,
+				C9B071221BDA8CAA00A8DD1C /* Info.plist */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		C9B0712D1BDA8CAA00A8DD1C /* PresentersTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9B0712E1BDA8CAA00A8DD1C /* PresentersTests.m */,
+				C9B071301BDA8CAA00A8DD1C /* Info.plist */,
+			);
+			path = PresentersTests;
+			sourceTree = "<group>";
+		};
+		C9B0713B1BDA8F3B00A8DD1C /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Infrastructure;
+			sourceTree = "<group>";
+		};
+		C9B0713C1BDA8F4200A8DD1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C9B0713D1BDA8F4700A8DD1C /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C9B070F81BDA8C8900A8DD1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B070FE1BDA8C8900A8DD1C /* Domain.h in Headers */,
+				C9B071211BDA8CAA00A8DD1C /* Presenters.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B0711B1BDA8CAA00A8DD1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		C9B070CA1BDA623600A8DD1C /* iTunesSearch */ = {
@@ -126,10 +324,13 @@
 				C9B070C71BDA623600A8DD1C /* Sources */,
 				C9B070C81BDA623600A8DD1C /* Frameworks */,
 				C9B070C91BDA623600A8DD1C /* Resources */,
+				C9B071171BDA8C8900A8DD1C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C9B0710F1BDA8C8900A8DD1C /* PBXTargetDependency */,
+				C9B071321BDA8CAA00A8DD1C /* PBXTargetDependency */,
 			);
 			name = iTunesSearch;
 			productName = iTunesSearch;
@@ -154,6 +355,80 @@
 			productReference = C9B070E71BDA623600A8DD1C /* iTunesSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C9B070FA1BDA8C8900A8DD1C /* Domain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9B071161BDA8C8900A8DD1C /* Build configuration list for PBXNativeTarget "Domain" */;
+			buildPhases = (
+				C9B070F61BDA8C8900A8DD1C /* Sources */,
+				C9B070F71BDA8C8900A8DD1C /* Frameworks */,
+				C9B070F81BDA8C8900A8DD1C /* Headers */,
+				C9B070F91BDA8C8900A8DD1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Domain;
+			productName = Domain;
+			productReference = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C9B071031BDA8C8900A8DD1C /* DomainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9B071181BDA8C8900A8DD1C /* Build configuration list for PBXNativeTarget "DomainTests" */;
+			buildPhases = (
+				C9B071001BDA8C8900A8DD1C /* Sources */,
+				C9B071011BDA8C8900A8DD1C /* Frameworks */,
+				C9B071021BDA8C8900A8DD1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9B071071BDA8C8900A8DD1C /* PBXTargetDependency */,
+				C9B071091BDA8C8900A8DD1C /* PBXTargetDependency */,
+			);
+			name = DomainTests;
+			productName = DomainTests;
+			productReference = C9B071041BDA8C8900A8DD1C /* DomainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9B0711D1BDA8CAA00A8DD1C /* Presenters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9B071351BDA8CAA00A8DD1C /* Build configuration list for PBXNativeTarget "Presenters" */;
+			buildPhases = (
+				C9B071191BDA8CAA00A8DD1C /* Sources */,
+				C9B0711A1BDA8CAA00A8DD1C /* Frameworks */,
+				C9B0711B1BDA8CAA00A8DD1C /* Headers */,
+				C9B0711C1BDA8CAA00A8DD1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Presenters;
+			productName = Presenters;
+			productReference = C9B0711E1BDA8CAA00A8DD1C /* Presenters.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C9B071261BDA8CAA00A8DD1C /* PresentersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9B071381BDA8CAA00A8DD1C /* Build configuration list for PBXNativeTarget "PresentersTests" */;
+			buildPhases = (
+				C9B071231BDA8CAA00A8DD1C /* Sources */,
+				C9B071241BDA8CAA00A8DD1C /* Frameworks */,
+				C9B071251BDA8CAA00A8DD1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9B0712A1BDA8CAA00A8DD1C /* PBXTargetDependency */,
+				C9B0712C1BDA8CAA00A8DD1C /* PBXTargetDependency */,
+			);
+			name = PresentersTests;
+			productName = PresentersTests;
+			productReference = C9B071271BDA8CAA00A8DD1C /* PresentersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -167,6 +442,20 @@
 						CreatedOnToolsVersion = 7.1;
 					};
 					C9B070E61BDA623600A8DD1C = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = C9B070CA1BDA623600A8DD1C;
+					};
+					C9B070FA1BDA8C8900A8DD1C = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					C9B071031BDA8C8900A8DD1C = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = C9B070CA1BDA623600A8DD1C;
+					};
+					C9B0711D1BDA8CAA00A8DD1C = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					C9B071261BDA8CAA00A8DD1C = {
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = C9B070CA1BDA623600A8DD1C;
 					};
@@ -187,6 +476,10 @@
 			targets = (
 				C9B070CA1BDA623600A8DD1C /* iTunesSearch */,
 				C9B070E61BDA623600A8DD1C /* iTunesSearchTests */,
+				C9B070FA1BDA8C8900A8DD1C /* Domain */,
+				C9B071031BDA8C8900A8DD1C /* DomainTests */,
+				C9B0711D1BDA8CAA00A8DD1C /* Presenters */,
+				C9B071261BDA8CAA00A8DD1C /* PresentersTests */,
 			);
 		};
 /* End PBXProject section */
@@ -203,6 +496,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C9B070E51BDA623600A8DD1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B070F91BDA8C8900A8DD1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B071021BDA8C8900A8DD1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B0711C1BDA8CAA00A8DD1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B071251BDA8CAA00A8DD1C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,6 +552,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C9B070F61BDA8C8900A8DD1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B071001BDA8C8900A8DD1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B0710C1BDA8C8900A8DD1C /* DomainTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B071191BDA8CAA00A8DD1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B071231BDA8CAA00A8DD1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B0712F1BDA8CAA00A8DD1C /* PresentersTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -238,6 +589,36 @@
 			isa = PBXTargetDependency;
 			target = C9B070CA1BDA623600A8DD1C /* iTunesSearch */;
 			targetProxy = C9B070E81BDA623600A8DD1C /* PBXContainerItemProxy */;
+		};
+		C9B071071BDA8C8900A8DD1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B070FA1BDA8C8900A8DD1C /* Domain */;
+			targetProxy = C9B071061BDA8C8900A8DD1C /* PBXContainerItemProxy */;
+		};
+		C9B071091BDA8C8900A8DD1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B070CA1BDA623600A8DD1C /* iTunesSearch */;
+			targetProxy = C9B071081BDA8C8900A8DD1C /* PBXContainerItemProxy */;
+		};
+		C9B0710F1BDA8C8900A8DD1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B070FA1BDA8C8900A8DD1C /* Domain */;
+			targetProxy = C9B0710E1BDA8C8900A8DD1C /* PBXContainerItemProxy */;
+		};
+		C9B0712A1BDA8CAA00A8DD1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B0711D1BDA8CAA00A8DD1C /* Presenters */;
+			targetProxy = C9B071291BDA8CAA00A8DD1C /* PBXContainerItemProxy */;
+		};
+		C9B0712C1BDA8CAA00A8DD1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B070CA1BDA623600A8DD1C /* iTunesSearch */;
+			targetProxy = C9B0712B1BDA8CAA00A8DD1C /* PBXContainerItemProxy */;
+		};
+		C9B071321BDA8CAA00A8DD1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B0711D1BDA8CAA00A8DD1C /* Presenters */;
+			targetProxy = C9B071311BDA8CAA00A8DD1C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -389,6 +770,126 @@
 			};
 			name = Release;
 		};
+		C9B071121BDA8C8900A8DD1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Domain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C9B071131BDA8C8900A8DD1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Domain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C9B071141BDA8C8900A8DD1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DomainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunesSearch.app/iTunesSearch";
+			};
+			name = Debug;
+		};
+		C9B071151BDA8C8900A8DD1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DomainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunesSearch.app/iTunesSearch";
+			};
+			name = Release;
+		};
+		C9B071361BDA8CAA00A8DD1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Presenters/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.Presenters;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C9B071371BDA8CAA00A8DD1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Presenters/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.Presenters;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C9B071391BDA8CAA00A8DD1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PresentersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.PresentersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunesSearch.app/iTunesSearch";
+			};
+			name = Debug;
+		};
+		C9B0713A1BDA8CAA00A8DD1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PresentersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.PresentersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunesSearch.app/iTunesSearch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -408,12 +909,46 @@
 				C9B070F21BDA623600A8DD1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9B070F31BDA623600A8DD1C /* Build configuration list for PBXNativeTarget "iTunesSearchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9B070F41BDA623600A8DD1C /* Debug */,
 				C9B070F51BDA623600A8DD1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9B071161BDA8C8900A8DD1C /* Build configuration list for PBXNativeTarget "Domain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9B071121BDA8C8900A8DD1C /* Debug */,
+				C9B071131BDA8C8900A8DD1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9B071181BDA8C8900A8DD1C /* Build configuration list for PBXNativeTarget "DomainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9B071141BDA8C8900A8DD1C /* Debug */,
+				C9B071151BDA8C8900A8DD1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9B071351BDA8CAA00A8DD1C /* Build configuration list for PBXNativeTarget "Presenters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9B071361BDA8CAA00A8DD1C /* Debug */,
+				C9B071371BDA8CAA00A8DD1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9B071381BDA8CAA00A8DD1C /* Build configuration list for PBXNativeTarget "PresentersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9B071391BDA8CAA00A8DD1C /* Debug */,
+				C9B0713A1BDA8CAA00A8DD1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
