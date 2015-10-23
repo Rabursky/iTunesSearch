@@ -28,6 +28,14 @@
 		C9B0713F1BDA8FD400A8DD1C /* ITSSearchNetworkProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0713E1BDA8FD400A8DD1C /* ITSSearchNetworkProtocol.h */; };
 		C9B071421BDA903000A8DD1C /* ITSNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071401BDA903000A8DD1C /* ITSNetworkManager.h */; };
 		C9B071431BDA903000A8DD1C /* ITSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071411BDA903000A8DD1C /* ITSNetworkManager.m */; };
+		C9B071471BDA96D700A8DD1C /* ITSSearchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071451BDA96D700A8DD1C /* ITSSearchResult.h */; };
+		C9B071481BDA96D700A8DD1C /* ITSSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071461BDA96D700A8DD1C /* ITSSearchResult.m */; };
+		C9B0714B1BDA96E600A8DD1C /* ITSSearchResultBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071491BDA96E600A8DD1C /* ITSSearchResultBuilder.h */; };
+		C9B0714C1BDA96E600A8DD1C /* ITSSearchResultBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0714A1BDA96E600A8DD1C /* ITSSearchResultBuilder.m */; };
+		C9B0714E1BDA970000A8DD1C /* ITSBuilderProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0714D1BDA970000A8DD1C /* ITSBuilderProtocol.h */; };
+		C9B071511BDA97B000A8DD1C /* ITSSearchResultBuilderTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071501BDA97B000A8DD1C /* ITSSearchResultBuilderTestCase.m */; };
+		C9B071521BDA97E700A8DD1C /* ITSSearchResultBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0714A1BDA96E600A8DD1C /* ITSSearchResultBuilder.m */; };
+		C9B071531BDA97F500A8DD1C /* ITSSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071461BDA96D700A8DD1C /* ITSSearchResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +136,12 @@
 		C9B0713E1BDA8FD400A8DD1C /* ITSSearchNetworkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSSearchNetworkProtocol.h; sourceTree = "<group>"; };
 		C9B071401BDA903000A8DD1C /* ITSNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSNetworkManager.h; sourceTree = "<group>"; };
 		C9B071411BDA903000A8DD1C /* ITSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSNetworkManager.m; sourceTree = "<group>"; };
+		C9B071451BDA96D700A8DD1C /* ITSSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSSearchResult.h; sourceTree = "<group>"; };
+		C9B071461BDA96D700A8DD1C /* ITSSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSSearchResult.m; sourceTree = "<group>"; };
+		C9B071491BDA96E600A8DD1C /* ITSSearchResultBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSSearchResultBuilder.h; sourceTree = "<group>"; };
+		C9B0714A1BDA96E600A8DD1C /* ITSSearchResultBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSSearchResultBuilder.m; sourceTree = "<group>"; };
+		C9B0714D1BDA970000A8DD1C /* ITSBuilderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSBuilderProtocol.h; sourceTree = "<group>"; };
+		C9B071501BDA97B000A8DD1C /* ITSSearchResultBuilderTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSSearchResultBuilderTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +258,7 @@
 		C9B070FC1BDA8C8900A8DD1C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C9B071441BDA969800A8DD1C /* Builders */,
 				C9B0713D1BDA8F4700A8DD1C /* Interactors */,
 				C9B0713C1BDA8F4200A8DD1C /* Models */,
 				C9B0713B1BDA8F3B00A8DD1C /* Infrastructure */,
@@ -258,6 +273,7 @@
 			children = (
 				C9B0710B1BDA8C8900A8DD1C /* DomainTests.m */,
 				C9B0710D1BDA8C8900A8DD1C /* Info.plist */,
+				C9B0714F1BDA979100A8DD1C /* Builders */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -293,6 +309,8 @@
 		C9B0713C1BDA8F4200A8DD1C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C9B071451BDA96D700A8DD1C /* ITSSearchResult.h */,
+				C9B071461BDA96D700A8DD1C /* ITSSearchResult.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -304,6 +322,24 @@
 			name = Interactors;
 			sourceTree = "<group>";
 		};
+		C9B071441BDA969800A8DD1C /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				C9B0714D1BDA970000A8DD1C /* ITSBuilderProtocol.h */,
+				C9B071491BDA96E600A8DD1C /* ITSSearchResultBuilder.h */,
+				C9B0714A1BDA96E600A8DD1C /* ITSSearchResultBuilder.m */,
+			);
+			name = Builders;
+			sourceTree = "<group>";
+		};
+		C9B0714F1BDA979100A8DD1C /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				C9B071501BDA97B000A8DD1C /* ITSSearchResultBuilderTestCase.m */,
+			);
+			name = Builders;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -311,8 +347,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B071471BDA96D700A8DD1C /* ITSSearchResult.h in Headers */,
 				C9B070FE1BDA8C8900A8DD1C /* Domain.h in Headers */,
+				C9B0714B1BDA96E600A8DD1C /* ITSSearchResultBuilder.h in Headers */,
 				C9B071211BDA8CAA00A8DD1C /* Presenters.h in Headers */,
+				C9B0714E1BDA970000A8DD1C /* ITSBuilderProtocol.h in Headers */,
 				C9B071421BDA903000A8DD1C /* ITSNetworkManager.h in Headers */,
 				C9B0713F1BDA8FD400A8DD1C /* ITSSearchNetworkProtocol.h in Headers */,
 			);
@@ -567,7 +606,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B0714C1BDA96E600A8DD1C /* ITSSearchResultBuilder.m in Sources */,
 				C9B071431BDA903000A8DD1C /* ITSNetworkManager.m in Sources */,
+				C9B071481BDA96D700A8DD1C /* ITSSearchResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +616,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B071521BDA97E700A8DD1C /* ITSSearchResultBuilder.m in Sources */,
+				C9B071531BDA97F500A8DD1C /* ITSSearchResult.m in Sources */,
+				C9B071511BDA97B000A8DD1C /* ITSSearchResultBuilderTestCase.m in Sources */,
 				C9B0710C1BDA8C8900A8DD1C /* DomainTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
