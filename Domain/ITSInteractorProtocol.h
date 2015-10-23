@@ -1,5 +1,5 @@
 //
-//  ITSBuilderProtocol.h
+//  ITSInteractorProtocol.h
 //  iTunesSearch
 //
 //  Created by Marcin Rabursky on 23/10/2015.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol ITSBuilderProtocol
+@protocol ITSInteractorProtocol
 
-- (NSObject *)buildModelWithJSON:(NSObject *)json;
+- (NSError *)execute;
 
 @end

@@ -36,6 +36,14 @@
 		C9B071511BDA97B000A8DD1C /* ITSSearchResultBuilderTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071501BDA97B000A8DD1C /* ITSSearchResultBuilderTestCase.m */; };
 		C9B071521BDA97E700A8DD1C /* ITSSearchResultBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0714A1BDA96E600A8DD1C /* ITSSearchResultBuilder.m */; };
 		C9B071531BDA97F500A8DD1C /* ITSSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071461BDA96D700A8DD1C /* ITSSearchResult.m */; };
+		C9B071571BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071551BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.h */; };
+		C9B071581BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071561BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.m */; };
+		C9B0715A1BDAA1CC00A8DD1C /* ITSInteractorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071591BDAA1CC00A8DD1C /* ITSInteractorProtocol.h */; };
+		C9B0715F1BDAA3FB00A8DD1C /* ITSGetSearchResultsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071561BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.m */; };
+		C9B071601BDAA40300A8DD1C /* ITSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071411BDA903000A8DD1C /* ITSNetworkManager.m */; };
+		C9B071621BDAA4DB00A8DD1C /* ITSGetSearchResultsInteractorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071611BDAA4DB00A8DD1C /* ITSGetSearchResultsInteractorTestCase.m */; };
+		C9B071651BDAA62700A8DD1C /* SearchNetworkMock.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071641BDAA62700A8DD1C /* SearchNetworkMock.m */; };
+		C9B071681BDAA93700A8DD1C /* BuilderMock.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071671BDAA93700A8DD1C /* BuilderMock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +150,14 @@
 		C9B0714A1BDA96E600A8DD1C /* ITSSearchResultBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSSearchResultBuilder.m; sourceTree = "<group>"; };
 		C9B0714D1BDA970000A8DD1C /* ITSBuilderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSBuilderProtocol.h; sourceTree = "<group>"; };
 		C9B071501BDA97B000A8DD1C /* ITSSearchResultBuilderTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSSearchResultBuilderTestCase.m; sourceTree = "<group>"; };
+		C9B071551BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSGetSearchResultsInteractor.h; sourceTree = "<group>"; };
+		C9B071561BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSGetSearchResultsInteractor.m; sourceTree = "<group>"; };
+		C9B071591BDAA1CC00A8DD1C /* ITSInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSInteractorProtocol.h; sourceTree = "<group>"; };
+		C9B071611BDAA4DB00A8DD1C /* ITSGetSearchResultsInteractorTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSGetSearchResultsInteractorTestCase.m; sourceTree = "<group>"; };
+		C9B071631BDAA62700A8DD1C /* SearchNetworkMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchNetworkMock.h; sourceTree = "<group>"; };
+		C9B071641BDAA62700A8DD1C /* SearchNetworkMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchNetworkMock.m; sourceTree = "<group>"; };
+		C9B071661BDAA93700A8DD1C /* BuilderMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuilderMock.h; sourceTree = "<group>"; };
+		C9B071671BDAA93700A8DD1C /* BuilderMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuilderMock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,8 +274,8 @@
 		C9B070FC1BDA8C8900A8DD1C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				C9B071441BDA969800A8DD1C /* Builders */,
 				C9B0713D1BDA8F4700A8DD1C /* Interactors */,
+				C9B071441BDA969800A8DD1C /* Builders */,
 				C9B0713C1BDA8F4200A8DD1C /* Models */,
 				C9B0713B1BDA8F3B00A8DD1C /* Infrastructure */,
 				C9B070FD1BDA8C8900A8DD1C /* Domain.h */,
@@ -271,9 +287,10 @@
 		C9B0710A1BDA8C8900A8DD1C /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
+				C9B0714F1BDA979100A8DD1C /* Builders */,
+				C9B0715B1BDAA28D00A8DD1C /* Interactors */,
 				C9B0710B1BDA8C8900A8DD1C /* DomainTests.m */,
 				C9B0710D1BDA8C8900A8DD1C /* Info.plist */,
-				C9B0714F1BDA979100A8DD1C /* Builders */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -318,6 +335,9 @@
 		C9B0713D1BDA8F4700A8DD1C /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				C9B071591BDAA1CC00A8DD1C /* ITSInteractorProtocol.h */,
+				C9B071551BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.h */,
+				C9B071561BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.m */,
 			);
 			name = Interactors;
 			sourceTree = "<group>";
@@ -340,6 +360,18 @@
 			name = Builders;
 			sourceTree = "<group>";
 		};
+		C9B0715B1BDAA28D00A8DD1C /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				C9B071631BDAA62700A8DD1C /* SearchNetworkMock.h */,
+				C9B071641BDAA62700A8DD1C /* SearchNetworkMock.m */,
+				C9B071661BDAA93700A8DD1C /* BuilderMock.h */,
+				C9B071671BDAA93700A8DD1C /* BuilderMock.m */,
+				C9B071611BDAA4DB00A8DD1C /* ITSGetSearchResultsInteractorTestCase.m */,
+			);
+			name = Interactors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -347,7 +379,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B071571BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.h in Headers */,
 				C9B071471BDA96D700A8DD1C /* ITSSearchResult.h in Headers */,
+				C9B0715A1BDAA1CC00A8DD1C /* ITSInteractorProtocol.h in Headers */,
 				C9B070FE1BDA8C8900A8DD1C /* Domain.h in Headers */,
 				C9B0714B1BDA96E600A8DD1C /* ITSSearchResultBuilder.h in Headers */,
 				C9B071211BDA8CAA00A8DD1C /* Presenters.h in Headers */,
@@ -607,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B0714C1BDA96E600A8DD1C /* ITSSearchResultBuilder.m in Sources */,
+				C9B071581BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.m in Sources */,
 				C9B071431BDA903000A8DD1C /* ITSNetworkManager.m in Sources */,
 				C9B071481BDA96D700A8DD1C /* ITSSearchResult.m in Sources */,
 			);
@@ -616,10 +651,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B071651BDAA62700A8DD1C /* SearchNetworkMock.m in Sources */,
 				C9B071521BDA97E700A8DD1C /* ITSSearchResultBuilder.m in Sources */,
 				C9B071531BDA97F500A8DD1C /* ITSSearchResult.m in Sources */,
+				C9B0715F1BDAA3FB00A8DD1C /* ITSGetSearchResultsInteractor.m in Sources */,
 				C9B071511BDA97B000A8DD1C /* ITSSearchResultBuilderTestCase.m in Sources */,
 				C9B0710C1BDA8C8900A8DD1C /* DomainTests.m in Sources */,
+				C9B071681BDAA93700A8DD1C /* BuilderMock.m in Sources */,
+				C9B071621BDAA4DB00A8DD1C /* ITSGetSearchResultsInteractorTestCase.m in Sources */,
+				C9B071601BDAA40300A8DD1C /* ITSNetworkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,10 +907,13 @@
 		C9B071141BDA8C8900A8DD1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DomainTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.DomainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DomainTests/DomainTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunesSearch.app/iTunesSearch";
 			};
 			name = Debug;
@@ -878,10 +921,12 @@
 		C9B071151BDA8C8900A8DD1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DomainTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.DomainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DomainTests/DomainTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunesSearch.app/iTunesSearch";
 			};
 			name = Release;

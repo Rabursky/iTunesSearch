@@ -1,5 +1,5 @@
 //
-//  ITSBuilderProtocol.h
+//  SearchResultBuilderMock.h
 //  iTunesSearch
 //
 //  Created by Marcin Rabursky on 23/10/2015.
@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ITSBuilderProtocol.h"
 
-@protocol ITSBuilderProtocol
+@interface BuilderMock : NSObject<ITSBuilderProtocol>
 
-- (NSObject *)buildModelWithJSON:(NSObject *)json;
+@property (nonatomic, strong) id returnsObject;
 
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol ITSSearchNetworkProtocol <NSObject>
+@protocol ITSSearchNetworkProtocol
 
 - (NSDictionary *)getSearchResultsWithTerm:(NSString *)term withError:(NSError **)error;
 

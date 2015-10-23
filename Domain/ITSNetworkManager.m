@@ -12,7 +12,8 @@
 
 - (NSDictionary *)getSearchResultsWithTerm:(NSString *)term withError:(NSError **)error {
     NSError *localError = nil;
-    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@", [term stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet new]]];
+    NSString *searchTerm = term ? [term stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet new]] : @"";
+    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@", searchTerm];
     
     NSMutableURLRequest *request = [NSMutableURLRequest new];
     [request setURL:[NSURL URLWithString:urlString]];
