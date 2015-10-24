@@ -282,6 +282,7 @@
 		C9B070CD1BDA623600A8DD1C /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				C9B071A41BDC047100A8DD1C /* Categories */,
 				C9B071901BDBBDB100A8DD1C /* Cells */,
 				C9B070D11BDA623600A8DD1C /* AppDelegate.h */,
 				C9B070D21BDA623600A8DD1C /* AppDelegate.m */,
@@ -465,8 +466,6 @@
 			children = (
 				C9B071911BDBC03400A8DD1C /* ITSArtworkTableViewCell.h */,
 				C9B071921BDBC03400A8DD1C /* ITSArtworkTableViewCell.m */,
-				C9B071A11BDBCC2000A8DD1C /* UIImageView+NSURL.h */,
-				C9B071A21BDBCC2000A8DD1C /* UIImageView+NSURL.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -478,6 +477,15 @@
 				C9B0719E1BDBC6E300A8DD1C /* NSURLSession+Sync.m */,
 			);
 			name = Misc;
+			sourceTree = "<group>";
+		};
+		C9B071A41BDC047100A8DD1C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C9B071A11BDBCC2000A8DD1C /* UIImageView+NSURL.h */,
+				C9B071A21BDBCC2000A8DD1C /* UIImageView+NSURL.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
