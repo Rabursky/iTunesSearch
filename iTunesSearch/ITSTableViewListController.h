@@ -9,11 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ITSTableViewListControllerProtocol.h"
 
-@class DetailViewController;
-
 @interface ITSTableViewListController : UITableViewController <ITSTableViewListControllerProtocol>
-
-@property (strong, nonatomic) DetailViewController *detailViewController;
 
 @end
 

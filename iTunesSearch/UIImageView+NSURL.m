@@ -6,10 +6,10 @@
 //  Copyright © 2015 Marcin Raburski. All rights reserved.
 //
 
-#import "ITSArtworkTableViewCell+NSURL.h"
+#import "UIImageView+NSURL.h"
 #import "NSURLSession+Sync.h"
 
-@implementation ITSArtworkTableViewCell (NSURL)
+@implementation UIImageView (NSURL)
 
 - (void)loadImageWithURL:(NSURL *)url {
     // Cache layer could have been added here
@@ -22,7 +22,7 @@
         if (!localError) {
             UIImage *image = [UIImage imageWithData:data];
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.artworkImageView.image = image;
+                self.image = image;
             });
         }
     });

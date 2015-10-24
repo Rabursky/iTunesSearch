@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ITSTableViewListControllerItemProtocol.h"
+#import "ITSSearchResult.h"
 
 @protocol ITSTableViewListControllerProtocol <NSObject>
 
@@ -15,6 +15,6 @@
 - (void)hideLoadingIndication;
 
 - (void)displayError:(NSError *)error;
-- (void)displayListWithItems:(NSArray<id<ITSTableViewListControllerItemProtocol>> *)items;
+- (void)displayListWithItems:(NSArray<ITSSearchResult *> *)items;
 
 @end

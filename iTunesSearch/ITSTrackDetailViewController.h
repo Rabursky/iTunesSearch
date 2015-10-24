@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ITSSearchResult.h"
 
-@interface DetailViewController : UIViewController
+@interface ITSTrackDetailViewController : UITableViewController
 
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) ITSSearchResult *detailItem;
 
 @end
 

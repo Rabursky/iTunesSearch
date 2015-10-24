@@ -7,7 +7,6 @@
 //
 
 #import "ITSSearchResultsPresenter.h"
-#import "ITSSearchResult+TableViewListControllerItem.h"
 
 @interface ITSSearchResultsPresenter ()
 

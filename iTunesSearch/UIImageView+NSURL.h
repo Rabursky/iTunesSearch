@@ -6,9 +6,9 @@
 //  Copyright © 2015 Marcin Raburski. All rights reserved.
 //
 
-#import "ITSArtworkTableViewCell.h"
+#import <UIKit/UIKit.h>
 
-@interface ITSArtworkTableViewCell (NSURL)
+@interface UIImageView (NSURL)
 
 - (void)loadImageWithURL:(NSURL *)url;
 

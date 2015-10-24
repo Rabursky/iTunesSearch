@@ -8,15 +8,16 @@
 
 #import "ITSTableViewListController.h"
 #import "ITSPresentersFactory.h"
-#import "DetailViewController.h"
+#import "ITSTrackDetailViewController.h"
 #import "ITSArtworkTableViewCell.h"
-#import "ITSArtworkTableViewCell+NSURL.h"
+#import "UIImageView+NSURL.h"
+#import "ITSTrackDetailViewController.h"
 
 @interface ITSTableViewListController () <UISearchBarDelegate>
 
 @property (nonatomic, strong) id<ITSSearchResultsPresenterProtocol> presenter;
 @property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
-@property (nonatomic, strong) NSArray<id<ITSTableViewListControllerItemProtocol>> *objects;
+@property (nonatomic, strong) NSArray<ITSSearchResult *> *objects;
 
 @end
 
@@ -26,7 +27,6 @@
     [super viewDidLoad];
     self.presenter = [ITSPresentersFactory searchResultsPresenter];
     [self.presenter setController:self];
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -60,16 +60,23 @@
     [self.tableView reloadData];
 }
 
+#pragma mark - Auxiliary
+
+- (void)updateDetailWithItem:(ITSSearchResult *)item {
+    UIViewController *controller = [[self.splitViewController.viewControllers lastObject] topViewController];
+    if ([controller isKindOfClass:[ITSTrackDetailViewController class]]) {
+        ((ITSTrackDetailViewController *)controller).detailItem = item;
+    } else {
+        [self performSegueWithIdentifier:@"showDetail" sender:item];
+    }
+}
+
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        NSDate *object = self.objects[indexPath.row];
-//        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-//        [controller setDetailItem:object];
-//        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-//        controller.navigationItem.leftItemsSupplementBackButton = YES;
+        ITSTrackDetailViewController *controller = (ITSTrackDetailViewController *)[segue destinationViewController];
+        [controller setDetailItem:sender];
     }
 }
 
@@ -86,13 +93,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ITSArtworkTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    id<ITSTableViewListControllerItemProtocol> item = self.objects[indexPath.row];
-    cell.titleLabel.text = item.title;
-    cell.subtitleLabel.text = item.subtitle;
+    ITSSearchResult *item = self.objects[indexPath.row];
+    cell.titleLabel.text = item.trackName;
+    cell.subtitleLabel.text = item.artistName;
     cell.artworkImageView.image = nil;
-    [cell loadImageWithURL:item.imageURL];
+    [cell.artworkImageView loadImageWithURL:item.artworkURL];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ITSSearchResult *item = self.objects[indexPath.row];
+    [self updateDetailWithItem:item];
 }
 
 #pragma mark - Search Bar Delegate
