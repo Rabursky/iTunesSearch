@@ -10,7 +10,7 @@
 #import "ITSPresentersFactory.h"
 #import "DetailViewController.h"
 
-@interface ITSTableViewListController ()
+@interface ITSTableViewListController () <UISearchBarDelegate>
 
 @property (nonatomic, strong) id<ITSSearchResultsPresenterProtocol> presenter;
 @property (nonatomic, strong) NSArray<id<ITSTableViewListControllerItemProtocol>> *objects;
@@ -23,23 +23,21 @@
     [super viewDidLoad];
     self.presenter = [ITSPresentersFactory searchResultsPresenter];
     [self.presenter setController:self];
-    [self.presenter performSearchWithTerm:@"bonobo"];
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
-    [super viewWillAppear:animated];
 }
 
 #pragma mark - ITSTableViewListControllerProtocol
 
 - (void)showLoadingIndication {
-    
+    self.tableView.tableFooterView = ({
+        UIActivityIndicatorView *view = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        [view startAnimating];
+        view;
+    });
 }
 
 - (void)hideLoadingIndication {
-    
+    self.tableView.tableFooterView = nil;
 }
 
 - (void)displayError:(NSError *)error {
@@ -82,6 +80,12 @@
     id<ITSTableViewListControllerItemProtocol> item = self.objects[indexPath.row];
     cell.textLabel.text = item.title;
     return cell;
+}
+
+#pragma mark - Search Bar Delegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.presenter performSearchWithTerm:searchBar.text];
 }
 
 @end

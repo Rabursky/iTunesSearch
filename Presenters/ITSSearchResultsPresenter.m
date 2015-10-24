@@ -25,9 +25,11 @@
 }
 
 - (void)performSearchWithTerm:(NSString *)term {
+    [self.controller displayListWithItems:@[]];
     [self.controller showLoadingIndication];
     self.interactor.input = term;
     [self.interactor execute];
+    [self.controller hideLoadingIndication];
     [self.controller displayListWithItems:self.interactor.output];
 }
 
