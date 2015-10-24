@@ -56,6 +56,9 @@
 		C9B071801BDBB24000A8DD1C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; };
 		C9B071841BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071821BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.h */; };
 		C9B071851BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071831BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.m */; };
+		C9B071891BDBB6FF00A8DD1C /* InteractorInvoker.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071871BDBB6FF00A8DD1C /* InteractorInvoker.h */; };
+		C9B0718A1BDBB6FF00A8DD1C /* InteractorInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071881BDBB6FF00A8DD1C /* InteractorInvoker.m */; };
+		C9B0718C1BDBB71800A8DD1C /* InteractorInvokerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0718B1BDBB71800A8DD1C /* InteractorInvokerProtocol.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +176,9 @@
 		C9B0717B1BDBB15200A8DD1C /* ITSPresentersFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSPresentersFactory.m; sourceTree = "<group>"; };
 		C9B071821BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ITSSearchResult+TableViewListControllerItem.h"; sourceTree = "<group>"; };
 		C9B071831BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ITSSearchResult+TableViewListControllerItem.m"; sourceTree = "<group>"; };
+		C9B071871BDBB6FF00A8DD1C /* InteractorInvoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractorInvoker.h; sourceTree = "<group>"; };
+		C9B071881BDBB6FF00A8DD1C /* InteractorInvoker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractorInvoker.m; sourceTree = "<group>"; };
+		C9B0718B1BDBB71800A8DD1C /* InteractorInvokerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractorInvokerProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,14 +262,8 @@
 			children = (
 				C9B070D11BDA623600A8DD1C /* AppDelegate.h */,
 				C9B070D21BDA623600A8DD1C /* AppDelegate.m */,
-				C9B070D41BDA623600A8DD1C /* ITSTableViewListController.h */,
-				C9B070D51BDA623600A8DD1C /* ITSTableViewListController.m */,
-				C9B070D71BDA623600A8DD1C /* DetailViewController.h */,
-				C9B070D81BDA623600A8DD1C /* DetailViewController.m */,
-				C9B070DA1BDA623600A8DD1C /* Main.storyboard */,
-				C9B070DD1BDA623600A8DD1C /* Assets.xcassets */,
-				C9B070DF1BDA623600A8DD1C /* LaunchScreen.storyboard */,
-				C9B070E21BDA623600A8DD1C /* Info.plist */,
+				C9B0718D1BDBBB6000A8DD1C /* ViewControllers */,
+				C9B0718E1BDBBB6800A8DD1C /* Resources */,
 				C9B070CE1BDA623600A8DD1C /* Supporting Files */,
 			);
 			path = iTunesSearch;
@@ -315,6 +315,7 @@
 		C9B0711F1BDA8CAA00A8DD1C /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				C9B071861BDBB6C700A8DD1C /* Invoker */,
 				C9B071201BDA8CAA00A8DD1C /* Presenters.h */,
 				C9B071221BDA8CAA00A8DD1C /* Info.plist */,
 				C9B0717A1BDBB15200A8DD1C /* ITSPresentersFactory.h */,
@@ -406,6 +407,38 @@
 			name = SearchResults;
 			sourceTree = "<group>";
 		};
+		C9B071861BDBB6C700A8DD1C /* Invoker */ = {
+			isa = PBXGroup;
+			children = (
+				C9B071871BDBB6FF00A8DD1C /* InteractorInvoker.h */,
+				C9B071881BDBB6FF00A8DD1C /* InteractorInvoker.m */,
+				C9B0718B1BDBB71800A8DD1C /* InteractorInvokerProtocol.h */,
+			);
+			name = Invoker;
+			sourceTree = "<group>";
+		};
+		C9B0718D1BDBBB6000A8DD1C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9B070D41BDA623600A8DD1C /* ITSTableViewListController.h */,
+				C9B070D51BDA623600A8DD1C /* ITSTableViewListController.m */,
+				C9B070D71BDA623600A8DD1C /* DetailViewController.h */,
+				C9B070D81BDA623600A8DD1C /* DetailViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C9B0718E1BDBBB6800A8DD1C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9B070DA1BDA623600A8DD1C /* Main.storyboard */,
+				C9B070DD1BDA623600A8DD1C /* Assets.xcassets */,
+				C9B070DF1BDA623600A8DD1C /* LaunchScreen.storyboard */,
+				C9B070E21BDA623600A8DD1C /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -432,6 +465,8 @@
 			files = (
 				C9B071751BDAB1FA00A8DD1C /* ITSGetSearchResultsInteractor.h in Headers */,
 				C9B071771BDBAEC300A8DD1C /* ITSSearchResultsPresenterProtocol.h in Headers */,
+				C9B0718C1BDBB71800A8DD1C /* InteractorInvokerProtocol.h in Headers */,
+				C9B071891BDBB6FF00A8DD1C /* InteractorInvoker.h in Headers */,
 				C9B071701BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h in Headers */,
 				C9B0717C1BDBB15200A8DD1C /* ITSPresentersFactory.h in Headers */,
 				C9B0716B1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.h in Headers */,
@@ -713,6 +748,7 @@
 				C9B0717D1BDBB15200A8DD1C /* ITSPresentersFactory.m in Sources */,
 				C9B071851BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.m in Sources */,
 				C9B0716C1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m in Sources */,
+				C9B0718A1BDBB6FF00A8DD1C /* InteractorInvoker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,12 @@
 #import "ITSPresentersFactory.h"
 #import "ITSSearchResultsPresenter.h"
 #import "ITSInteractorsFactory.h"
+#import "InteractorInvoker.h"
 
 @implementation ITSPresentersFactory
 
 + (id<ITSSearchResultsPresenterProtocol>)searchResultsPresenter {
-    return [[ITSSearchResultsPresenter alloc] initWithGetSearchResultsInteractor:[ITSInteractorsFactory getSearchResultsInteractor]];
+    return [[ITSSearchResultsPresenter alloc] initWithInteractorInvoker:[InteractorInvoker new] getSearchResultsInteractor:[ITSInteractorsFactory getSearchResultsInteractor]];
 }
 
 @end

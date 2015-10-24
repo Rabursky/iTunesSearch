@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "ITSGetSearchResultsInteractor.h"
 #import "ITSSearchResultsPresenterProtocol.h"
+#import "InteractorInvokerProtocol.h"
 
 @interface ITSSearchResultsPresenter : NSObject <ITSSearchResultsPresenterProtocol>
 
 @property (nonatomic, weak) id<ITSTableViewListControllerProtocol> controller;
 
-- (instancetype)initWithGetSearchResultsInteractor:(ITSGetSearchResultsInteractor *)interactor;
+- (instancetype)initWithInteractorInvoker:(id<InteractorInvokerProtocol>)invoker getSearchResultsInteractor:(ITSGetSearchResultsInteractor *)interactor;
 
 @end
