@@ -11,6 +11,7 @@
 @protocol ITSTableViewListControllerItemProtocol <NSObject>
 
 - (NSString *)title;
+- (NSString *)subtitle;
 - (NSString *)imageName;
 
 @end

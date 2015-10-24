@@ -14,6 +14,10 @@
     return self.trackName;
 }
 
+- (NSString *)subtitle {
+    return self.artistName;
+}
+
 - (NSString *)imageName {
     return nil;
 }

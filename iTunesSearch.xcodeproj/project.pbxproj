@@ -59,6 +59,9 @@
 		C9B071891BDBB6FF00A8DD1C /* InteractorInvoker.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071871BDBB6FF00A8DD1C /* InteractorInvoker.h */; };
 		C9B0718A1BDBB6FF00A8DD1C /* InteractorInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071881BDBB6FF00A8DD1C /* InteractorInvoker.m */; };
 		C9B0718C1BDBB71800A8DD1C /* InteractorInvokerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0718B1BDBB71800A8DD1C /* InteractorInvokerProtocol.h */; };
+		C9B071931BDBC03400A8DD1C /* ITSArtworkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071921BDBC03400A8DD1C /* ITSArtworkTableViewCell.m */; };
+		C9B071981BDBC54A00A8DD1C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; };
+		C9B071991BDBC54A00A8DD1C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,20 @@
 			remoteGlobalIDString = C9B0711D1BDA8CAA00A8DD1C;
 			remoteInfo = Presenters;
 		};
+		C9B071941BDBC48800A8DD1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B070C31BDA623600A8DD1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B070FA1BDA8C8900A8DD1C;
+			remoteInfo = Domain;
+		};
+		C9B0719A1BDBC54B00A8DD1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B070C31BDA623600A8DD1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B070FA1BDA8C8900A8DD1C;
+			remoteInfo = Domain;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +130,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C9B071991BDBC54A00A8DD1C /* Domain.framework in Embed Frameworks */,
 				C9B071341BDA8CAA00A8DD1C /* Presenters.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -179,6 +197,8 @@
 		C9B071871BDBB6FF00A8DD1C /* InteractorInvoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractorInvoker.h; sourceTree = "<group>"; };
 		C9B071881BDBB6FF00A8DD1C /* InteractorInvoker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractorInvoker.m; sourceTree = "<group>"; };
 		C9B0718B1BDBB71800A8DD1C /* InteractorInvokerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractorInvokerProtocol.h; sourceTree = "<group>"; };
+		C9B071911BDBC03400A8DD1C /* ITSArtworkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSArtworkTableViewCell.h; sourceTree = "<group>"; };
+		C9B071921BDBC03400A8DD1C /* ITSArtworkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSArtworkTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B071981BDBC54A00A8DD1C /* Domain.framework in Frameworks */,
 				C9B071331BDA8CAA00A8DD1C /* Presenters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +281,7 @@
 		C9B070CD1BDA623600A8DD1C /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				C9B071901BDBBDB100A8DD1C /* Cells */,
 				C9B070D11BDA623600A8DD1C /* AppDelegate.h */,
 				C9B070D21BDA623600A8DD1C /* AppDelegate.m */,
 				C9B0718D1BDBBB6000A8DD1C /* ViewControllers */,
@@ -439,6 +461,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		C9B071901BDBBDB100A8DD1C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C9B071911BDBC03400A8DD1C /* ITSArtworkTableViewCell.h */,
+				C9B071921BDBC03400A8DD1C /* ITSArtworkTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -491,6 +522,7 @@
 			);
 			dependencies = (
 				C9B071321BDA8CAA00A8DD1C /* PBXTargetDependency */,
+				C9B0719B1BDBC54B00A8DD1C /* PBXTargetDependency */,
 			);
 			name = iTunesSearch;
 			productName = iTunesSearch;
@@ -564,6 +596,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C9B071951BDBC48800A8DD1C /* PBXTargetDependency */,
 			);
 			name = Presenters;
 			productName = Presenters;
@@ -636,10 +669,10 @@
 			targets = (
 				C9B070CA1BDA623600A8DD1C /* iTunesSearch */,
 				C9B070E61BDA623600A8DD1C /* iTunesSearchTests */,
-				C9B070FA1BDA8C8900A8DD1C /* Domain */,
-				C9B071031BDA8C8900A8DD1C /* DomainTests */,
 				C9B0711D1BDA8CAA00A8DD1C /* Presenters */,
 				C9B071261BDA8CAA00A8DD1C /* PresentersTests */,
+				C9B070FA1BDA8C8900A8DD1C /* Domain */,
+				C9B071031BDA8C8900A8DD1C /* DomainTests */,
 			);
 		};
 /* End PBXProject section */
@@ -698,6 +731,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B070D31BDA623600A8DD1C /* AppDelegate.m in Sources */,
+				C9B071931BDBC03400A8DD1C /* ITSArtworkTableViewCell.m in Sources */,
 				C9B070D61BDA623600A8DD1C /* ITSTableViewListController.m in Sources */,
 				C9B070D01BDA623600A8DD1C /* main.m in Sources */,
 				C9B070D91BDA623600A8DD1C /* DetailViewController.m in Sources */,
@@ -792,6 +826,16 @@
 			isa = PBXTargetDependency;
 			target = C9B0711D1BDA8CAA00A8DD1C /* Presenters */;
 			targetProxy = C9B071311BDA8CAA00A8DD1C /* PBXContainerItemProxy */;
+		};
+		C9B071951BDBC48800A8DD1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B070FA1BDA8C8900A8DD1C /* Domain */;
+			targetProxy = C9B071941BDBC48800A8DD1C /* PBXContainerItemProxy */;
+		};
+		C9B0719B1BDBC54B00A8DD1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B070FA1BDA8C8900A8DD1C /* Domain */;
+			targetProxy = C9B0719A1BDBC54B00A8DD1C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -902,6 +946,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iTunesSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.iTunesSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -913,6 +958,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iTunesSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rzeczy.iTunesSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

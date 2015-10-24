@@ -9,10 +9,12 @@
 #import "ITSTableViewListController.h"
 #import "ITSPresentersFactory.h"
 #import "DetailViewController.h"
+#import "ITSArtworkTableViewCell.h"
 
 @interface ITSTableViewListController () <UISearchBarDelegate>
 
 @property (nonatomic, strong) id<ITSSearchResultsPresenterProtocol> presenter;
+@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, strong) NSArray<id<ITSTableViewListControllerItemProtocol>> *objects;
 
 @end
@@ -24,6 +26,11 @@
     self.presenter = [ITSPresentersFactory searchResultsPresenter];
     [self.presenter setController:self];
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.searchBar becomeFirstResponder];
 }
 
 #pragma mark - ITSTableViewListControllerProtocol
@@ -76,16 +83,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    ITSArtworkTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     id<ITSTableViewListControllerItemProtocol> item = self.objects[indexPath.row];
-    cell.textLabel.text = item.title;
+    cell.titleLabel.text = item.title;
+    cell.subtitleLabel.text = item.subtitle;
     return cell;
 }
 
 #pragma mark - Search Bar Delegate
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
     [self.presenter performSearchWithTerm:searchBar.text];
 }
 
