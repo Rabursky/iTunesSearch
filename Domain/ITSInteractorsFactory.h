@@ -11,6 +11,6 @@
 
 @interface ITSInteractorsFactory : NSObject
 
-- (ITSGetSearchResultsInteractor *)getSearchResultsInteractor;
++ (ITSGetSearchResultsInteractor *)getSearchResultsInteractor;
 
 @end

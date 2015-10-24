@@ -11,10 +11,9 @@
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController <ITSTableViewListControllerProtocol>
+@interface ITSTableViewListController : UITableViewController <ITSTableViewListControllerProtocol>
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
-
 
 @end
 

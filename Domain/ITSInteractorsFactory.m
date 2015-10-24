@@ -12,7 +12,7 @@
 
 @implementation ITSInteractorsFactory
 
-- (ITSGetSearchResultsInteractor *)getSearchResultsInteractor {
++ (ITSGetSearchResultsInteractor *)getSearchResultsInteractor {
     return [[ITSGetSearchResultsInteractor alloc] initWithSearchNetwork:[ITSNetworkManager new] andSearchResultBuilder:[ITSSearchResultBuilder new]];
 }
 

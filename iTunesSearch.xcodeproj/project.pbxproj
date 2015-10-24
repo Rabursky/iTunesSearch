@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C9B070D01BDA623600A8DD1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B070CF1BDA623600A8DD1C /* main.m */; };
 		C9B070D31BDA623600A8DD1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B070D21BDA623600A8DD1C /* AppDelegate.m */; };
-		C9B070D61BDA623600A8DD1C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B070D51BDA623600A8DD1C /* MasterViewController.m */; };
+		C9B070D61BDA623600A8DD1C /* ITSTableViewListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B070D51BDA623600A8DD1C /* ITSTableViewListController.m */; };
 		C9B070D91BDA623600A8DD1C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B070D81BDA623600A8DD1C /* DetailViewController.m */; };
 		C9B070DC1BDA623600A8DD1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B070DA1BDA623600A8DD1C /* Main.storyboard */; };
 		C9B070DE1BDA623600A8DD1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B070DD1BDA623600A8DD1C /* Assets.xcassets */; };
@@ -18,8 +18,6 @@
 		C9B070FE1BDA8C8900A8DD1C /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B070FD1BDA8C8900A8DD1C /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9B071051BDA8C8900A8DD1C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; };
 		C9B0710C1BDA8C8900A8DD1C /* DomainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0710B1BDA8C8900A8DD1C /* DomainTests.m */; };
-		C9B071101BDA8C8900A8DD1C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; };
-		C9B071111BDA8C8900A8DD1C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9B071211BDA8CAA00A8DD1C /* Presenters.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071201BDA8CAA00A8DD1C /* Presenters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9B071281BDA8CAA00A8DD1C /* Presenters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B0711E1BDA8CAA00A8DD1C /* Presenters.framework */; };
 		C9B0712F1BDA8CAA00A8DD1C /* PresentersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0712E1BDA8CAA00A8DD1C /* PresentersTests.m */; };
@@ -50,6 +48,14 @@
 		C9B071701BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0716F1BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h */; };
 		C9B071731BDAB0BD00A8DD1C /* ITSInteractorsFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071711BDAB0BD00A8DD1C /* ITSInteractorsFactory.h */; };
 		C9B071741BDAB0BD00A8DD1C /* ITSInteractorsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071721BDAB0BD00A8DD1C /* ITSInteractorsFactory.m */; };
+		C9B071751BDAB1FA00A8DD1C /* ITSGetSearchResultsInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071551BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.h */; };
+		C9B071771BDBAEC300A8DD1C /* ITSSearchResultsPresenterProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071761BDBAEC300A8DD1C /* ITSSearchResultsPresenterProtocol.h */; };
+		C9B0717C1BDBB15200A8DD1C /* ITSPresentersFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0717A1BDBB15200A8DD1C /* ITSPresentersFactory.h */; };
+		C9B0717D1BDBB15200A8DD1C /* ITSPresentersFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0717B1BDBB15200A8DD1C /* ITSPresentersFactory.m */; };
+		C9B0717F1BDBB22E00A8DD1C /* ITSInteractorsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071721BDAB0BD00A8DD1C /* ITSInteractorsFactory.m */; };
+		C9B071801BDBB24000A8DD1C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; };
+		C9B071841BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B071821BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.h */; };
+		C9B071851BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071831BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,13 +79,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = C9B070CA1BDA623600A8DD1C;
 			remoteInfo = iTunesSearch;
-		};
-		C9B0710E1BDA8C8900A8DD1C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9B070C31BDA623600A8DD1C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9B070FA1BDA8C8900A8DD1C;
-			remoteInfo = Domain;
 		};
 		C9B071291BDA8CAA00A8DD1C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -111,7 +110,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C9B071111BDA8C8900A8DD1C /* Domain.framework in Embed Frameworks */,
 				C9B071341BDA8CAA00A8DD1C /* Presenters.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -124,8 +122,8 @@
 		C9B070CF1BDA623600A8DD1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9B070D11BDA623600A8DD1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9B070D21BDA623600A8DD1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C9B070D41BDA623600A8DD1C /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		C9B070D51BDA623600A8DD1C /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		C9B070D41BDA623600A8DD1C /* ITSTableViewListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITSTableViewListController.h; sourceTree = "<group>"; };
+		C9B070D51BDA623600A8DD1C /* ITSTableViewListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITSTableViewListController.m; sourceTree = "<group>"; };
 		C9B070D71BDA623600A8DD1C /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C9B070D81BDA623600A8DD1C /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C9B070DB1BDA623600A8DD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +168,11 @@
 		C9B0716F1BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSTableViewListControllerItemProtocol.h; sourceTree = "<group>"; };
 		C9B071711BDAB0BD00A8DD1C /* ITSInteractorsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSInteractorsFactory.h; sourceTree = "<group>"; };
 		C9B071721BDAB0BD00A8DD1C /* ITSInteractorsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSInteractorsFactory.m; sourceTree = "<group>"; };
+		C9B071761BDBAEC300A8DD1C /* ITSSearchResultsPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSSearchResultsPresenterProtocol.h; sourceTree = "<group>"; };
+		C9B0717A1BDBB15200A8DD1C /* ITSPresentersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSPresentersFactory.h; sourceTree = "<group>"; };
+		C9B0717B1BDBB15200A8DD1C /* ITSPresentersFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSPresentersFactory.m; sourceTree = "<group>"; };
+		C9B071821BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ITSSearchResult+TableViewListControllerItem.h"; sourceTree = "<group>"; };
+		C9B071831BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ITSSearchResult+TableViewListControllerItem.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +180,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9B071101BDA8C8900A8DD1C /* Domain.framework in Frameworks */,
 				C9B071331BDA8CAA00A8DD1C /* Presenters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B071801BDBB24000A8DD1C /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,8 +256,8 @@
 			children = (
 				C9B070D11BDA623600A8DD1C /* AppDelegate.h */,
 				C9B070D21BDA623600A8DD1C /* AppDelegate.m */,
-				C9B070D41BDA623600A8DD1C /* MasterViewController.h */,
-				C9B070D51BDA623600A8DD1C /* MasterViewController.m */,
+				C9B070D41BDA623600A8DD1C /* ITSTableViewListController.h */,
+				C9B070D51BDA623600A8DD1C /* ITSTableViewListController.m */,
 				C9B070D71BDA623600A8DD1C /* DetailViewController.h */,
 				C9B070D81BDA623600A8DD1C /* DetailViewController.m */,
 				C9B070DA1BDA623600A8DD1C /* Main.storyboard */,
@@ -314,10 +317,9 @@
 			children = (
 				C9B071201BDA8CAA00A8DD1C /* Presenters.h */,
 				C9B071221BDA8CAA00A8DD1C /* Info.plist */,
-				C9B0716D1BDAACC200A8DD1C /* ITSTableViewListControllerProtocol.h */,
-				C9B0716F1BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h */,
-				C9B071691BDAAC4400A8DD1C /* ITSSearchResultsPresenter.h */,
-				C9B0716A1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m */,
+				C9B0717A1BDBB15200A8DD1C /* ITSPresentersFactory.h */,
+				C9B0717B1BDBB15200A8DD1C /* ITSPresentersFactory.m */,
+				C9B0717E1BDBB15F00A8DD1C /* SearchResults */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -390,6 +392,20 @@
 			name = Interactors;
 			sourceTree = "<group>";
 		};
+		C9B0717E1BDBB15F00A8DD1C /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				C9B0716D1BDAACC200A8DD1C /* ITSTableViewListControllerProtocol.h */,
+				C9B0716F1BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h */,
+				C9B071691BDAAC4400A8DD1C /* ITSSearchResultsPresenter.h */,
+				C9B0716A1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m */,
+				C9B071761BDBAEC300A8DD1C /* ITSSearchResultsPresenterProtocol.h */,
+				C9B071821BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.h */,
+				C9B071831BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.m */,
+			);
+			name = SearchResults;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -414,8 +430,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B071751BDAB1FA00A8DD1C /* ITSGetSearchResultsInteractor.h in Headers */,
+				C9B071771BDBAEC300A8DD1C /* ITSSearchResultsPresenterProtocol.h in Headers */,
 				C9B071701BDAAE8800A8DD1C /* ITSTableViewListControllerItemProtocol.h in Headers */,
+				C9B0717C1BDBB15200A8DD1C /* ITSPresentersFactory.h in Headers */,
 				C9B0716B1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.h in Headers */,
+				C9B071841BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.h in Headers */,
 				C9B0716E1BDAACC200A8DD1C /* ITSTableViewListControllerProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,7 +455,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C9B0710F1BDA8C8900A8DD1C /* PBXTargetDependency */,
 				C9B071321BDA8CAA00A8DD1C /* PBXTargetDependency */,
 			);
 			name = iTunesSearch;
@@ -644,7 +663,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B070D31BDA623600A8DD1C /* AppDelegate.m in Sources */,
-				C9B070D61BDA623600A8DD1C /* MasterViewController.m in Sources */,
+				C9B070D61BDA623600A8DD1C /* ITSTableViewListController.m in Sources */,
 				C9B070D01BDA623600A8DD1C /* main.m in Sources */,
 				C9B070D91BDA623600A8DD1C /* DetailViewController.m in Sources */,
 			);
@@ -682,6 +701,7 @@
 				C9B0710C1BDA8C8900A8DD1C /* DomainTests.m in Sources */,
 				C9B071681BDAA93700A8DD1C /* BuilderMock.m in Sources */,
 				C9B071621BDAA4DB00A8DD1C /* ITSGetSearchResultsInteractorTestCase.m in Sources */,
+				C9B0717F1BDBB22E00A8DD1C /* ITSInteractorsFactory.m in Sources */,
 				C9B071601BDAA40300A8DD1C /* ITSNetworkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -690,6 +710,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B0717D1BDBB15200A8DD1C /* ITSPresentersFactory.m in Sources */,
+				C9B071851BDBB3AB00A8DD1C /* ITSSearchResult+TableViewListControllerItem.m in Sources */,
 				C9B0716C1BDAAC4400A8DD1C /* ITSSearchResultsPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -719,11 +741,6 @@
 			isa = PBXTargetDependency;
 			target = C9B070CA1BDA623600A8DD1C /* iTunesSearch */;
 			targetProxy = C9B071081BDA8C8900A8DD1C /* PBXContainerItemProxy */;
-		};
-		C9B0710F1BDA8C8900A8DD1C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9B070FA1BDA8C8900A8DD1C /* Domain */;
-			targetProxy = C9B0710E1BDA8C8900A8DD1C /* PBXContainerItemProxy */;
 		};
 		C9B0712A1BDA8CAA00A8DD1C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

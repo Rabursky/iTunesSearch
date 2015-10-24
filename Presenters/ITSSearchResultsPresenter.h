@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ITSGetSearchResultsInteractor.h"
+#import "ITSSearchResultsPresenterProtocol.h"
 
-@interface ITSSearchResultsPresenter : NSObject
+@interface ITSSearchResultsPresenter : NSObject <ITSSearchResultsPresenterProtocol>
 
+@property (nonatomic, weak) id<ITSTableViewListControllerProtocol> controller;
+
+- (instancetype)initWithGetSearchResultsInteractor:(ITSGetSearchResultsInteractor *)interactor;
 
 @end

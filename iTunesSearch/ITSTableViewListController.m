@@ -6,19 +6,24 @@
 //  Copyright © 2015 Marcin Raburski. All rights reserved.
 //
 
-#import "MasterViewController.h"
+#import "ITSTableViewListController.h"
+#import "ITSPresentersFactory.h"
 #import "DetailViewController.h"
 
-@interface MasterViewController ()
+@interface ITSTableViewListController ()
 
+@property (nonatomic, strong) id<ITSSearchResultsPresenterProtocol> presenter;
 @property (nonatomic, strong) NSArray<id<ITSTableViewListControllerItemProtocol>> *objects;
 
 @end
 
-@implementation MasterViewController
+@implementation ITSTableViewListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.presenter = [ITSPresentersFactory searchResultsPresenter];
+    [self.presenter setController:self];
+    [self.presenter performSearchWithTerm:@"bonobo"];
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 

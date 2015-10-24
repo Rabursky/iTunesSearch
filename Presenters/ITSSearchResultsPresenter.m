@@ -7,7 +7,28 @@
 //
 
 #import "ITSSearchResultsPresenter.h"
+#import "ITSSearchResult+TableViewListControllerItem.h"
+
+@interface ITSSearchResultsPresenter ()
+
+@property (nonatomic, strong) ITSGetSearchResultsInteractor *interactor;
+
+@end
 
 @implementation ITSSearchResultsPresenter
+
+- (instancetype)initWithGetSearchResultsInteractor:(ITSGetSearchResultsInteractor *)interactor {
+    if (self = [super init]) {
+        self.interactor = interactor;
+    }
+    return self;
+}
+
+- (void)performSearchWithTerm:(NSString *)term {
+    [self.controller showLoadingIndication];
+    self.interactor.input = term;
+    [self.interactor execute];
+    [self.controller displayListWithItems:self.interactor.output];
+}
 
 @end
