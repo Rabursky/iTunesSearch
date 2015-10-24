@@ -10,6 +10,15 @@
 
 @implementation ITSSearchResultBuilder
 
+static NSDateFormatter *_sharedFormatter;
++ (NSDateFormatter *)dateFormatter {
+    if (!_sharedFormatter) {
+        _sharedFormatter = [[NSDateFormatter alloc] init];
+        [_sharedFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
+    }
+    return _sharedFormatter;
+}
+
 - (ITSSearchResult *)buildModelWithJSON:(NSDictionary *)json {
     if (![json isKindOfClass:[NSDictionary class]]) {
         return nil;
@@ -21,6 +30,7 @@
     result.trackName = json[@"trackName"];
     result.artworkURL = json[@"artworkUrl100"] ? [NSURL URLWithString:json[@"artworkUrl100"]] : nil;
     result.price = json[@"trackPrice"];
+    result.releaseDate = [self.class.dateFormatter dateFromString:json[@"releaseDate"]];
     return result;
 }
 

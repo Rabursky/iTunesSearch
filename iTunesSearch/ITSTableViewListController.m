@@ -31,7 +31,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.searchBar becomeFirstResponder];
+    if (self.searchBar.text.length == 0) {
+        [self.searchBar becomeFirstResponder];
+    }
 }
 
 #pragma mark - ITSTableViewListControllerProtocol
