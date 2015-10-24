@@ -31,6 +31,7 @@
 - (void)showLoadingIndication {
     self.tableView.tableFooterView = ({
         UIActivityIndicatorView *view = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        view.frame = CGRectMake(0, 0, 100, 100);
         [view startAnimating];
         view;
     });

@@ -30,15 +30,24 @@
     [self.controller displayListWithItems:@[]];
     [self.controller showLoadingIndication];
     
+    NSString *input = term;
+    __weak ITSSearchResultsPresenter *weakSelf = self;
+    
     self.interactor.input = term;
     [self.invoker invoke:self.interactor completionBlock:^(NSError *error) {
-        [self.controller hideLoadingIndication];
-        if (error) {
-            [self.controller displayError:error];
-        } else {
-            [self.controller displayListWithItems:self.interactor.output];
+        if ([weakSelf isMostRecentSearch:input]) {
+            [self.controller hideLoadingIndication];
+            if (error) {
+                [self.controller displayError:error];
+            } else {
+                [self.controller displayListWithItems:self.interactor.output];
+            }
         }
     }];
+}
+
+- (BOOL)isMostRecentSearch:(NSString *)term {
+    return [self.interactor.input isEqualToString:term];
 }
 
 @end
