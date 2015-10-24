@@ -7,6 +7,7 @@
 //
 
 #import "ITSNetworkManager.h"
+#import "NSURLSession+Sync.h"
 
 @implementation ITSNetworkManager
 
@@ -20,7 +21,7 @@
     [request setHTTPMethod:@"GET"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
-    NSData *data = [self synchronousRequest:request withError:&localError];
+    NSData *data = [[NSURLSession sharedSession] synchronousRequest:request withError:&localError];
     if (localError) {
         *error = localError;
         return nil;
@@ -33,27 +34,6 @@
     }
     
     return json;
-}
-
-- (NSData *)synchronousRequest:(NSURLRequest *)request withError:(NSError **)error {
-    // Damn Apple, deprecating NSURLConnections' sendSynchronous...
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    __block NSData *returnData;
-    __block NSError *returnError;
-    
-    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        returnError = error;
-        returnData = data;
-        dispatch_semaphore_signal(semaphore);
-    }] resume];
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-    
-    if (returnError) {
-        *error = returnError;
-        return nil;
-    }
-    
-    return returnData;
 }
 
 @end

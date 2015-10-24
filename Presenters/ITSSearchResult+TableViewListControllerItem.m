@@ -18,8 +18,8 @@
     return self.artistName;
 }
 
-- (NSString *)imageName {
-    return nil;
+- (NSURL *)imageURL {
+    return self.artworkURL;
 }
 
 @end

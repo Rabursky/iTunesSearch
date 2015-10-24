@@ -12,6 +12,6 @@
 
 - (NSString *)title;
 - (NSString *)subtitle;
-- (NSString *)imageName;
+- (NSURL *)imageURL;
 
 @end

@@ -10,6 +10,7 @@
 #import "ITSPresentersFactory.h"
 #import "DetailViewController.h"
 #import "ITSArtworkTableViewCell.h"
+#import "ITSArtworkTableViewCell+NSURL.h"
 
 @interface ITSTableViewListController () <UISearchBarDelegate>
 
@@ -88,6 +89,9 @@
     id<ITSTableViewListControllerItemProtocol> item = self.objects[indexPath.row];
     cell.titleLabel.text = item.title;
     cell.subtitleLabel.text = item.subtitle;
+    cell.artworkImageView.image = nil;
+    [cell loadImageWithURL:item.imageURL];
+    
     return cell;
 }
 

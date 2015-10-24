@@ -62,6 +62,9 @@
 		C9B071931BDBC03400A8DD1C /* ITSArtworkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071921BDBC03400A8DD1C /* ITSArtworkTableViewCell.m */; };
 		C9B071981BDBC54A00A8DD1C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; };
 		C9B071991BDBC54A00A8DD1C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9B070FB1BDA8C8900A8DD1C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9B0719F1BDBC6E300A8DD1C /* NSURLSession+Sync.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0719D1BDBC6E300A8DD1C /* NSURLSession+Sync.h */; };
+		C9B071A01BDBC6E300A8DD1C /* NSURLSession+Sync.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B0719E1BDBC6E300A8DD1C /* NSURLSession+Sync.m */; };
+		C9B071A31BDBCC2000A8DD1C /* ITSArtworkTableViewCell+NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B071A21BDBCC2000A8DD1C /* ITSArtworkTableViewCell+NSURL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +202,10 @@
 		C9B0718B1BDBB71800A8DD1C /* InteractorInvokerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractorInvokerProtocol.h; sourceTree = "<group>"; };
 		C9B071911BDBC03400A8DD1C /* ITSArtworkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSArtworkTableViewCell.h; sourceTree = "<group>"; };
 		C9B071921BDBC03400A8DD1C /* ITSArtworkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSArtworkTableViewCell.m; sourceTree = "<group>"; };
+		C9B0719D1BDBC6E300A8DD1C /* NSURLSession+Sync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+Sync.h"; sourceTree = "<group>"; };
+		C9B0719E1BDBC6E300A8DD1C /* NSURLSession+Sync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+Sync.m"; sourceTree = "<group>"; };
+		C9B071A11BDBCC2000A8DD1C /* ITSArtworkTableViewCell+NSURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ITSArtworkTableViewCell+NSURL.h"; sourceTree = "<group>"; };
+		C9B071A21BDBCC2000A8DD1C /* ITSArtworkTableViewCell+NSURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ITSArtworkTableViewCell+NSURL.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +318,7 @@
 		C9B070FC1BDA8C8900A8DD1C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C9B0719C1BDBC6B900A8DD1C /* Misc */,
 				C9B071711BDAB0BD00A8DD1C /* ITSInteractorsFactory.h */,
 				C9B071721BDAB0BD00A8DD1C /* ITSInteractorsFactory.m */,
 				C9B0713D1BDA8F4700A8DD1C /* Interactors */,
@@ -466,8 +474,19 @@
 			children = (
 				C9B071911BDBC03400A8DD1C /* ITSArtworkTableViewCell.h */,
 				C9B071921BDBC03400A8DD1C /* ITSArtworkTableViewCell.m */,
+				C9B071A11BDBCC2000A8DD1C /* ITSArtworkTableViewCell+NSURL.h */,
+				C9B071A21BDBCC2000A8DD1C /* ITSArtworkTableViewCell+NSURL.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		C9B0719C1BDBC6B900A8DD1C /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				C9B0719D1BDBC6E300A8DD1C /* NSURLSession+Sync.h */,
+				C9B0719E1BDBC6E300A8DD1C /* NSURLSession+Sync.m */,
+			);
+			name = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,6 +501,7 @@
 				C9B0715A1BDAA1CC00A8DD1C /* ITSInteractorProtocol.h in Headers */,
 				C9B071731BDAB0BD00A8DD1C /* ITSInteractorsFactory.h in Headers */,
 				C9B070FE1BDA8C8900A8DD1C /* Domain.h in Headers */,
+				C9B0719F1BDBC6E300A8DD1C /* NSURLSession+Sync.h in Headers */,
 				C9B0714B1BDA96E600A8DD1C /* ITSSearchResultBuilder.h in Headers */,
 				C9B071211BDA8CAA00A8DD1C /* Presenters.h in Headers */,
 				C9B0714E1BDA970000A8DD1C /* ITSBuilderProtocol.h in Headers */,
@@ -730,6 +750,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B071A31BDBCC2000A8DD1C /* ITSArtworkTableViewCell+NSURL.m in Sources */,
 				C9B070D31BDA623600A8DD1C /* AppDelegate.m in Sources */,
 				C9B071931BDBC03400A8DD1C /* ITSArtworkTableViewCell.m in Sources */,
 				C9B070D61BDA623600A8DD1C /* ITSTableViewListController.m in Sources */,
@@ -752,6 +773,7 @@
 			files = (
 				C9B0714C1BDA96E600A8DD1C /* ITSSearchResultBuilder.m in Sources */,
 				C9B071581BDAA1BA00A8DD1C /* ITSGetSearchResultsInteractor.m in Sources */,
+				C9B071A01BDBC6E300A8DD1C /* NSURLSession+Sync.m in Sources */,
 				C9B071431BDA903000A8DD1C /* ITSNetworkManager.m in Sources */,
 				C9B071741BDAB0BD00A8DD1C /* ITSInteractorsFactory.m in Sources */,
 				C9B071481BDA96D700A8DD1C /* ITSSearchResult.m in Sources */,
